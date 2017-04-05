@@ -16,7 +16,6 @@ var requestComplete = function () {
 };
 
 var buildOutput = function (pokemon) {
-  console.log(pokemon);
   var mainDiv = document.querySelector('#pokemon-cage');
   pokemon.forEach(function (poke) {
     var name = buildElement('h2', poke.name, "");
@@ -24,7 +23,6 @@ var buildOutput = function (pokemon) {
     var type = buildElement('p', poke.type, "type: " );
     var number = buildElement('p' ,poke.number, "number: ");
     var img = document.createElement('img');
-    console.log(poke._id);
     img.src = poke.img;
 
     var pokeDiv = document.createElement('div');
@@ -41,7 +39,7 @@ var buildElement = function (tag, content, label){
 
 var appender = function(parent, children){
   for(child of children){
-    console.log(child);
+
     parent.appendChild(child);
   }
   return parent;
